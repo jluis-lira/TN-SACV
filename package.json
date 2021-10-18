@@ -1,14 +1,15 @@
 {
   "name": "tn-sacv",
   "version": "1.0.0",
-  "description": "An API REST using express.js",
+  "description": "This is a project for the node.js",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/jluis-lira/TN-SACV.git"
   },
   "keywords": [
     "api",
@@ -18,7 +19,12 @@
   ],
   "author": "Luis Lira",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jluis-lira/TN-SACV/issues"
+  },
+  "homepage": "https://github.com/jluis-lira/TN-SACV#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nodemon": "^2.0.13"
   }
 }
