@@ -1,0 +1,24 @@
+{
+  "name": "tn-sacv",
+  "version": "1.0.0",
+  "description": "An API REST using express.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "api, rest, express, node.js"
+  },
+  "keywords": [
+    "api",
+    "rest",
+    "express",
+    "node.js"
+  ],
+  "author": "Luis Lira",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
