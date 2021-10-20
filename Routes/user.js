@@ -3,26 +3,20 @@ const jwt = require('jsonwebtoken');
 const user = express.Router();
 const db = require('../config/database');
 
-user.get('/', async (req,res,next)=>{
-	const query = ("SELECT * FROM user");
-	const rows = await db.query(query);
-	return res.status(200).json({code:200,message:(rows)});
-});
-
 user.post('/signin', async (req,res,next)=>{
-	const{user_name,user_mail, user_password, employee_id}=req.body;
-	if(user_name && user_mail && user_password && employee_id){	
+	const{user_name, user_employee,user_mail, user_password}=req.body;
+	if(user_name && user_employee && user_mail && user_password ){	
 		let query = "INSERT INTO user (user_name, user_mail, user_password, employee_id)";
-		query+=` VALUES ('${user_name}','${user_mail}','${user_password}'),${employee_id}`;
+		query+=` VALUES ('${user_name}','${user_mail}','${user_password}',${user_employee})`;
 
 		const rows= await db.query(query);
 
 		if(rows.affectedRows==1){
 			return res.status(201).json({code:201,message:"Usuario registrado correctamente"});
 		}
-		return res.status(500).json({code: 500,message:"Ocurrió un error."});
+		return res.status(200).json({code: 401,message:"Ocurrió un error."});
 	}
-	return res.status(500).json({code: 500,message:"Campos incompletos."});
+	return res.status(200).json({code: 500,message:"Campos incompletos."});
 
 });
 user.post('/login', async (req,res,next)=>{
@@ -38,10 +32,10 @@ user.post('/login', async (req,res,next)=>{
 			},"debugkey");
 			return res.status(200).json({code:200,message:token});
 		}else{
-			return res.status(401).json({code:401,message:"Usuario y/o contraseña incorrectas"});
+			return res.status(200).json({code:401,message:"Usuario y/o contraseña incorrectas"});
 		}
 	}
-	return res.status(500).json({code: 500,message:"Campos incompletos."});
+	return res.status(200).json({code: 500,message:"Campos incompletos."});
 });
 user.get('/', async (req,res,next)=>{
 	const query = ("SELECT * FROM user");

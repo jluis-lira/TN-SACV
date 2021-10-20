@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/employee.js"></script>
+    <title>Admin</title>
+</head>
+<body id="Signin">
+    <div class="contenedor">
+		<h2>Empleados</h2>
+		<div class="barra__buscador">
+			<div action="" class="formulario" >
+				<button  class="enviarA medium"  id="btn-search">Buscar</button>
+				<button  class="enviarA medium"  id="btn-add">Agregar</button>
+				<button  class="enviarA medium"  id="btn-update">Modificar</button>
+				<button  class="enviarA medium"  id="btn-delete">Eliminar</button>
+            </div>
+		</div>
+		<table class="datos">
+			<tr class="head">
+				<td>Id</td>
+				<td>Nombre</td>
+				<td>Apellido</td>
+				<td>Teléfono</td>
+				<td>Email</td>
+				<td>Dirección</td>
+			</tr >
+			<tr >
+			</tr>
+		</table>
+	</div>
+
+	<script src="./js/validate.js"></script>
+</body>
+</html>

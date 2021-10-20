@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  	<meta charset="utf-8">
+	<title>Search</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/estilos.css">  
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
+</head>
+<body id="Admin">
+	<div class="mainContacto">
+		
+		<div id="contRight">
+			<h2>Busqueda de empleados</h2>
+			<br>
+			<div class="addCont">
+				<label >Ingresa el nombre del empleado</label><br>
+				<input type="text" placeholder="Juan Jose" id="first_name" class="inputForm short" required><br>
+				<button class="enviar Corto"  id="btn-primary">Buscar</button>
+            </div>
+		</div>
+		<table class="datos">
+			<tr class="head">
+				<td>Id</td>
+				<td>Nombre</td>
+				<td>Apellido</td>
+				<td>Teléfono</td>
+				<td>Email</td>
+				<td>Dirección</td>
+			</tr >
+			<tr >
+			</tr>
+		</table>
+	</div>
+    <script src="./js/search.js"></script> 
+</body>
+</html>

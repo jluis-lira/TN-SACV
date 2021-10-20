@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  	<meta charset="utf-8">
+	<title>Sign In</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>  
+    <script src="./js/signin.js"></script>
+</head>
+	<body id="Signin">
+		<div class="mainSignin">
+			<div class="headerLogin">
+				<h1>Crea una cuenta</h1>
+			</div>
+			<div id="contCenter">
+				<img src="img/logo.PNG" >
+				<div class="addCont">
+					<div class="columnaForm">
+						<label >Usuario</label><br>
+						<input type="text" id="input-name" class="inputForm short" placeholder="luisLG10" required><br>
+						<label>ID Empleado</label><br>
+						<input type="number" id="input-employee" class="inputForm short" placeholder="123456" required><br>
+						<label>Correo electrónico</label><br>
+						<input type="email" id="input-mail"  class="inputForm large" placeholder="correo@dominio.ext"required><br>
+					</div>
+					<div class="columnaForm">
+	                    <label>Contraseña</label><br>
+						<input type="password" placeholder="***********" id="input-password" class="inputForm short" required><br>
+						<label>Confirma la Contraseña</label><br>
+						<input type="password" placeholder="***********" id="correo" class="inputForm short" ><br>
+					</div>
+				</div>
+			</div>
+			<div class="botones">
+				<button class="enviar Corto"  id="btn-primary">Registrarme</button>
+				<button class="enviarA Corto"  id="btn-secondary">Login</button>
+			</div>
+		</div>
+    </body>
+</html>
